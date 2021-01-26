@@ -1,0 +1,31 @@
+extends base
+
+block content
+
+ header.header
+    
+    .header__menu
+       .logo
+          img.header__logo(src='img/camerax.png', alt='Logo')
+       .navmenu
+          .navlink
+             a(href='#').linkmenu ABOUT
+          .navlink
+             a(href='#').linkmenu PRODUCT
+          .navlink
+             a(href='#').linkmenu CONTACT
+             
+    .header__content
+        .left_content
+           img.imgcontent(src='../img/beauty.jpg', alt='App Demo')
+        .right_content
+           .titleapps
+              h2.textapp Camerax Pro Beauty App
+           .apps
+              .boxleft
+                 img.imgapps(src='../img/apple.png', alt='App Store')
+              .boxright
+                 img.imgapps(src='../img/android.png', alt='Google Play')
+
+    .header__footer
+      p.footertext Copyright &copy;2021 CameraX. All rights reserved.
