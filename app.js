@@ -3,10 +3,8 @@ const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
-//const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
 const hpp = require('hpp');
-//const cookieParser = require('cookie-parser');
 // const bodyParser = require('body-parser');
 const compression = require('compression');
 const cors = require('cors');
@@ -23,13 +21,11 @@ app.enable('trust proxy');
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
 
-// 1) GLOBAL MIDDLEWARES
-// Implement CORS
+// 1)  MIDDLEWARES
+// CORS
 app.use(cors());
-// Access-Control-Allow-Origin *
-// api.natours.com, front-end natours.com
 // app.use(cors({
-//   origin: 'https://www.camerax.com'
+//   origin: 'https://www.camerax.net'
 // }))
 
 app.options('*', cors());
@@ -53,8 +49,6 @@ const limiter = rateLimit({
   message: 'Too many requests from this IP, please try again in an hour!'
 });
 app.use('/api', limiter);
-
-// Stripe webhook, BEFORE body-parser, because stripe needs the body as stream
 
 // Body parser, reading data from body into req.body
 app.use(express.json({ limit: '10kb' }));
