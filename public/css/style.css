@@ -214,6 +214,12 @@ body {
   margin-top: 2rem;
 }
 
+.footerauthor {
+  font-size: 1.5rem;
+  color: #161616;
+  margin-top: 2rem;
+  text-align: center;
+}
 
 /* //////RESPONSIVE MOBILE/////////// */
 
