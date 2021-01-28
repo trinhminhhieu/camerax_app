@@ -5,6 +5,9 @@ block content
  header.header
     
     .header__menu
+       input#check(type='checkbox')
+       label.checkbtn(for='check')
+         i#openbtn.fas.fa-bars      
        .logo
           img.header__logo(src='img/camerax.png', alt='Logo')
        .navmenu
@@ -14,7 +17,7 @@ block content
              a(href='#').linkmenu PRODUCT
           .navlink
              a(href='#').linkmenu CONTACT
-             
+
     .header__content
         .left_content
            img.imgcontent(src='../img/beauty.jpg', alt='App Demo')
@@ -30,3 +33,5 @@ block content
     .header__footer
       p.footertext Copyright &copy;2021 CameraX. All rights reserved.
       p.footerauthor Author Trinh Minh Hieu
+ 
+ script(src='https://kit.fontawesome.com/a076d05399.js')
